@@ -5,7 +5,7 @@ namespace Model;
 class Exemple extends Model 
 {
 
-    protected $table = "exemple"; 
+    protected $table = "exemples"; 
 
     public $propriete1;
     public $propriete2;
@@ -25,7 +25,7 @@ class Exemple extends Model
      * @return void
      */
     public function insert(string $name, string $taste, int $user_id) :void{
-        $requete = $this->pdo->prepare("INSERT INTO {$this->table}(propriete1, propriete2, id) VALUES (:propriete1,:propriete2, :id)");
+        $requete = $this->pdo->prepare("INSERT INTO exemples(propriete1, propriete2, id) VALUES (:propriete1,:propriete2, :id)");
         $requete->execute(['propriete1'=>$propriete1,
                                     'propriete2'=>$propriete2,
                                     'id'=>$id]);
