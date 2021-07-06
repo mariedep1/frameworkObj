@@ -26,7 +26,7 @@ class User extends Controller
             $this->model->logIn($usernameEntre, $passwordEntre);
 
 
-            \Http::redirect("index.php?controller=gateau&task=index");
+            \Http::redirect("index.php");
          
             
         }else{
@@ -46,7 +46,7 @@ class User extends Controller
     public function signOut() {
 
         $this->model->logOut(); 
-        \Http::redirect("index.php?controller=gateau&task=index"); 
+        \Http::redirect("index.php"); 
     }
 
 
